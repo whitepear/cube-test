@@ -1,8 +1,9 @@
 $(document).ready(function() {
 	$('.cube').click(function() {
-		$(this).addClass('spun');
+		$(this).css('transform', 'rotateY(360deg)');
+
 		setTimeout(function() {
-			$(this).removeClass('spun');
-		}, 1000)
+			$(this).css('transform', 'rotateY(0deg)');
+		}, 1000);
 	});	
 });
