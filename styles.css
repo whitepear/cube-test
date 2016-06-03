@@ -3,13 +3,16 @@
   height: 200px;
   position: relative;
   perspective: 1000px;
+  margin: 250px auto 0;
 }
 
 .cube {
   width: 100%;
   height: 100%;
   position: absolute;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d;  
+  transition-property: transform;
+  transition-duration: 1s;
 }
 
 .cube div {
@@ -19,4 +22,15 @@
   display: block;
   position: absolute;
   border: 2px solid black;
+}
+
+.cube .front  { transform: rotateY(   0deg ) translateZ( 100px ); background-color: green; }
+.cube .back   { transform: rotateX( 180deg ) translateZ( 100px ); background-color: red; }
+.cube .right  { transform: rotateY(  90deg ) translateZ( 100px ); background-color: yellow; }
+.cube .left   { transform: rotateY( -90deg ) translateZ( 100px ); background-color: blue; }
+.cube .top    { transform: rotateX(  90deg ) translateZ( 100px ); background-color: orange; }
+.cube .bottom { transform: rotateX( -90deg ) translateZ( 100px ); background-color: pink; }
+
+.spun {
+  transform: rotateY(360deg);
 }
